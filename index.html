@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .selected{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="item1" class="item">Hello World</p>
+    <p id="item2" class="item">Hello World 2</p>
+    <p class="item">Hello World 3</p>
+    <p class="item">Hello World 4</p>
+    <p id="button">Click meeee!</p>
+    <script type="text/javascript">
+    function doSomething(){
+      let items = document.getElementsByClassName("item");
+      for (let item of items){
+        item.classList.toggle("selected")
+      }
+    }
+    let button = document.getElementById("button")
+    button.addEventListener("click", doSomething)
+
+    </script>
+  </body>
+
+</html>
